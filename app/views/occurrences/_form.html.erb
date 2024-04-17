@@ -1,0 +1,77 @@
+<%= form_with(model: occurrence) do |form| %>
+  <% if occurrence.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(occurrence.errors.count, "error") %> prohibited this occurrence from being saved:</h2>
+
+      <ul>
+        <% occurrence.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :email, style: "display: block" %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div>
+    <%= form.label :tel, style: "display: block" %>
+    <%= form.number_field :tel %>
+  </div>
+
+  <div>
+    <%= form.label :ocurrenceType, style: "display: block" %>
+    <%= form.text_field :ocurrenceType %>
+  </div>
+
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div>
+    <%= form.label :latitude, style: "display: block" %>
+    <%= form.text_field :latitude %>
+  </div>
+
+  <div>
+    <%= form.label :longitude, style: "display: block" %>
+    <%= form.text_field :longitude %>
+  </div>
+
+  <div>
+    <%= form.label :postalCode, style: "display: block" %>
+    <%= form.text_field :postalCode %>
+  </div>
+
+  <div>
+    <%= form.label :street, style: "display: block" %>
+    <%= form.text_field :street %>
+  </div>
+
+  <div>
+    <%= form.label :neighborhood, style: "display: block" %>
+    <%= form.text_field :neighborhood %>
+  </div>
+
+  <div>
+    <%= form.label :city, style: "display: block" %>
+    <%= form.text_field :city %>
+  </div>
+
+  <div>
+    <%= form.label :uf, style: "display: block" %>
+    <%= form.text_field :uf %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

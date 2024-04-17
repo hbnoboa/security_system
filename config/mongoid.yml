@@ -1,0 +1,15 @@
+development:
+  clients:
+    default:
+      uri: mongodb+srv://hbnoboa:hbn110900@danger-button.yicitmt.mongodb.net/ios?retryWrites=true&w=majority&appName=danger-button
+      options:
+        server_selection_timeout: 5
+        timezone: "Brasilia"
+
+production:
+  clients:
+    default:
+      uri: mongodb+srv://hbnoboa:hbn110900@danger-button.yicitmt.mongodb.net/ios?retryWrites=true&w=majority&appName=danger-button
+      options:
+        server_selection_timeout: 5
+        timezone: "Brasilia"
