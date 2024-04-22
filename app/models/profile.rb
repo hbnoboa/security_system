@@ -43,6 +43,8 @@ class Profile
 
   ROLES = ["User", "Manager", "Admin"].freeze
 
+  validates :cpf, uniqueness: true
+
   def ensure_authentication_token
     self.authentication_token ||= generate_unique_token
   end
