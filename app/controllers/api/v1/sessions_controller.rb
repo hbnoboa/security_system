@@ -1,4 +1,5 @@
 class Api::V1::SessionsController < Devise::SessionsController
+    skip_before_action :verify_authenticity_token, only: [:create]
     protect_from_forgery with: :null_session
     respond_to :json
     before_action :configure_sign_in_params, only: [:create]

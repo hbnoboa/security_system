@@ -8,6 +8,8 @@ class Profile
   ## Database authenticatable
   field :email,              type: String, default: ""
   field :login, type: String, default: ""
+  field :tel, type: String, default: ""
+  field :cpf, type: String, default: ""
   field :name, type: String, default: ""
   field :role, type: String, default: ""
   field :encrypted_password, type: String, default: ""
