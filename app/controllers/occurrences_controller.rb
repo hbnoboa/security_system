@@ -66,7 +66,7 @@ class OccurrencesController < ApplicationController
     # Only allow a list of trusted parameters through.
     def occurrence_params
       params.require(:occurrence).permit(
-        :name, 
+        :cpf, 
         :email, 
         :tel, 
         :ocurrenceType, 
