@@ -3,7 +3,7 @@ class OccurrencesController < ApplicationController
 
   # GET /occurrences or /occurrences.json
   def index
-    @occurrences = Occurrence.all
+    @occurrences = Occurrence.all.order(created_at: :desc)
   end
 
   # GET /occurrences/1 or /occurrences/1.json
@@ -66,19 +66,28 @@ class OccurrencesController < ApplicationController
     # Only allow a list of trusted parameters through.
     def occurrence_params
       params.require(:occurrence).permit(
-        :cpf, 
-        :email, 
-        :tel, 
-        :ocurrenceType, 
-        :emergency, 
-        :description, 
-        :latitude, 
-        :longitude, 
-        :postalCode, 
-        :street, 
-        :neighborhood, 
-        :city, 
-        :uf
+        :audio,
+        :city,
+        :cpf,
+        :createdAt,
+        :description,
+        :email,
+        :emergency,
+        :image1,
+        :image2,
+        :image3,
+        :image4,
+        :latitude,
+        :longitude,
+        :neighborhood,
+        :ocurrenceType,
+        :postalCode,
+        :street,
+        :tel,
+        :uf,
+        :updatedAt,
+        :video1,
+        :video2,
       )
     end
 end
