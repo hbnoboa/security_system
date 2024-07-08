@@ -73,43 +73,58 @@
     </div>
 
     <div class="row mb-3">
-      <div class="col-md-6">
-        <label><strong>Imagem 1:</strong></label>
-        <%= image_tag occurrence.image1, class: "img-fluid" %>
-      </div>
-      <div class="col-md-6">
-        <label><strong>Imagem 2:</strong></label>
-        <%= image_tag occurrence.image2, class: "img-fluid" %>
-      </div>
+      <% if occurrence.image1.present? %>
+        <div class="col-md-6">
+          <label><strong>Imagem 1:</strong></label>
+          <%= image_tag occurrence.image1, class: "img-fluid" %>
+        </div>
+      <% end %>
+      <% if occurrence.image2.present? %>
+        <div class="col-md-6">
+          <label><strong>Imagem 2:</strong></label>
+          <%= image_tag occurrence.image2, class: "img-fluid" %>
+        </div>
+      <% end %>
     </div>
 
     <div class="row mb-3">
-      <div class="col-md-6">
-        <label><strong>Imagem 3:</strong></label>
-        <%= image_tag occurrence.image3, class: "img-fluid" %>
-      </div>
-      <div class="col-md-6">
-        <label><strong>Imagem 4:</strong></label>
-        <%= image_tag occurrence.image4, class: "img-fluid" %>
-      </div>
+      <% if occurrence.image3.present? %>
+        <div class="col-md-6">
+          <label><strong>Imagem 3:</strong></label>
+          <%= image_tag occurrence.image3, class: "img-fluid" %>
+        </div>
+      <% end %>
+      <% if occurrence.image4.present? %>
+        <div class="col-md-6">
+          <label><strong>Imagem 4:</strong></label>
+          <%= image_tag occurrence.image4, class: "img-fluid" %>
+        </div>
+      <% end %>
     </div>
 
     <div class="row mb-3">
-      <div class="col-md-6">
-        <label><strong>Vídeo 1:</strong></label>
-        <%= video_tag occurrence.video1, controls: true, class: "img-fluid" %>
-      </div>
-      <div class="col-md-6">
-        <label><strong>Vídeo 2:</strong></label>
-        <%= video_tag occurrence.video2, controls: true, class: "img-fluid" %>
-      </div>
+      <% if occurrence.video1.present? %>
+        <div class="col-md-6">
+          <label><strong>Vídeo 1:</strong></label>
+          <%= video_tag occurrence.video1, controls: true, class: "img-fluid" %>
+        </div>
+      <% end %>
+      <% if occurrence.video2.present? %>
+        <div class="col-md-6">
+          <label><strong>Vídeo 2:</strong></label>
+          <%= video_tag occurrence.video2, controls: true, class: "img-fluid" %>
+        </div>
+      <% end %>
     </div>
 
     <div class="row mb-3">
-      <div class="col-12">
-        <label><strong>Áudio:</strong></label>
-        <%= audio_tag occurrence.audio, controls: true %>
-      </div>
+      <% if occurrence.audio.present? %>
+        <div class="col-12">
+          <label><strong>Áudio:</strong></label>
+          <%= audio_tag occurrence.audio, controls: true %>
+        </div>
+      <% end %>
     </div>
+
   </div>
 </div>
