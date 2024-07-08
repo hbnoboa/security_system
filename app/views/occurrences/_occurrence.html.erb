@@ -1,62 +1,115 @@
-<div id="<%= dom_id occurrence %>">
-  <p>
-    <strong>cpf:</strong>
-    <%= occurrence.cpf %>
-  </p>
+<div id="<%= dom_id occurrence %>" class="card mb-3">
+  <div class="card-header">
+    <h4>Detalhes da Ocorrência</h4>
+  </div>
+  <div class="card-body">
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label><strong>CPF:</strong></label>
+        <p><%= occurrence.cpf %></p>
+      </div>
+      <div class="col-md-6">
+        <label><strong>Email:</strong></label>
+        <p><%= occurrence.email %></p>
+      </div>
+    </div>
+    
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label><strong>Telefone:</strong></label>
+        <p><%= occurrence.tel %></p>
+      </div>
+      <div class="col-md-6">
+        <label><strong>Tipo de Ocorrência:</strong></label>
+        <p><%= occurrence.ocurrenceType %></p>
+      </div>
+    </div>
 
-  <p>
-    <strong>Email:</strong>
-    <%= occurrence.email %>
-  </p>
+    <div class="row mb-3">
+      <div class="col-12">
+        <label><strong>Descrição:</strong></label>
+        <p><%= occurrence.description %></p>
+      </div>
+    </div>
 
-  <p>
-    <strong>Tel:</strong>
-    <%= occurrence.tel %>
-  </p>
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label><strong>Latitude:</strong></label>
+        <p><%= occurrence.latitude %></p>
+      </div>
+      <div class="col-md-6">
+        <label><strong>Longitude:</strong></label>
+        <p><%= occurrence.longitude %></p>
+      </div>
+    </div>
 
-  <p>
-    <strong>Ocurrencetype:</strong>
-    <%= occurrence.ocurrenceType %>
-  </p>
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label><strong>CEP:</strong></label>
+        <p><%= occurrence.postalCode %></p>
+      </div>
+      <div class="col-md-6">
+        <label><strong>Rua:</strong></label>
+        <p><%= occurrence.street %></p>
+      </div>
+    </div>
 
-  <p>
-    <strong>Description:</strong>
-    <%= occurrence.description %>
-  </p>
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label><strong>Bairro:</strong></label>
+        <p><%= occurrence.neighborhood %></p>
+      </div>
+      <div class="col-md-6">
+        <label><strong>Cidade:</strong></label>
+        <p><%= occurrence.city %></p>
+      </div>
+    </div>
 
-  <p>
-    <strong>Latitude:</strong>
-    <%= occurrence.latitude %>
-  </p>
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label><strong>UF:</strong></label>
+        <p><%= occurrence.uf %></p>
+      </div>
+    </div>
 
-  <p>
-    <strong>Longitude:</strong>
-    <%= occurrence.longitude %>
-  </p>
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label><strong>Imagem 1:</strong></label>
+        <%= image_tag occurrence.image1, class: "img-fluid" %>
+      </div>
+      <div class="col-md-6">
+        <label><strong>Imagem 2:</strong></label>
+        <%= image_tag occurrence.image2, class: "img-fluid" %>
+      </div>
+    </div>
 
-  <p>
-    <strong>Postalcode:</strong>
-    <%= occurrence.postalCode %>
-  </p>
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label><strong>Imagem 3:</strong></label>
+        <%= image_tag occurrence.image3, class: "img-fluid" %>
+      </div>
+      <div class="col-md-6">
+        <label><strong>Imagem 4:</strong></label>
+        <%= image_tag occurrence.image4, class: "img-fluid" %>
+      </div>
+    </div>
 
-  <p>
-    <strong>Street:</strong>
-    <%= occurrence.street %>
-  </p>
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label><strong>Vídeo 1:</strong></label>
+        <%= video_tag occurrence.video1, controls: true, class: "img-fluid" %>
+      </div>
+      <div class="col-md-6">
+        <label><strong>Vídeo 2:</strong></label>
+        <%= video_tag occurrence.video2, controls: true, class: "img-fluid" %>
+      </div>
+    </div>
 
-  <p>
-    <strong>Neighborhood:</strong>
-    <%= occurrence.neighborhood %>
-  </p>
-
-  <p>
-    <strong>City:</strong>
-    <%= occurrence.city %>
-  </p>
-
-  <p>
-    <strong>Uf:</strong>
-    <%= occurrence.uf %>
-  </p>
-
+    <div class="row mb-3">
+      <div class="col-12">
+        <label><strong>Áudio:</strong></label>
+        <%= audio_tag occurrence.audio, controls: true %>
+      </div>
+    </div>
+  </div>
 </div>
