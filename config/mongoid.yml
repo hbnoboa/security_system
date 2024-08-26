@@ -1,7 +1,7 @@
 development:
   clients:
     default:
-      uri: mongodb+srv://hbnoboa:hbn110900@security-system.ecv1k.mongodb.net/?retryWrites=true&w=majority&appName=security-system
+      uri: mongodb+srv://hbnoboa:hbn110900@security-system.ecv1k.mongodb.net/db?retryWrites=true&w=majority&appName=security-system
       options:
         server_selection_timeout: 5
         timezone: "Brasilia"
@@ -9,7 +9,7 @@ development:
 production:
   clients:
     default:
-      uri: mongodb+srv://hbnoboa:hbn110900@security-system.ecv1k.mongodb.net/?retryWrites=true&w=majority&appName=security-system
+      uri: mongodb+srv://hbnoboa:hbn110900@security-system.ecv1k.mongodb.net/db?retryWrites=true&w=majority&appName=security-system
       options:
         server_selection_timeout: 5
         timezone: "Brasilia"

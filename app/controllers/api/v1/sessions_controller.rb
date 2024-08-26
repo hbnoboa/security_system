@@ -30,6 +30,4 @@ class Api::V1::SessionsController < Devise::SessionsController
     end
   end
   
-# curl -X POST -H "Content-Type: application/json" 
-# -d '{"api_v1_user": {"email": "hbnoboa11@gmail.com", "password": "@#12345Ab"}}' 
-# https://ios-car-f8bf78f8eb62.herokuapp.com/api/v1/users/sign_in
+ #curl -X POST -H "Content-Type: application/json" -d '{"api_v1_user": {"email": "hbnoboa11@gmail.com", "password": "@#12345Ab"}}' http://security-system-11ab0fb3d022.herokuapp.com/api/v1/users/sign_in
